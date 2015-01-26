@@ -16,6 +16,12 @@ In your code
 FlashMessage.warning('Be warned');
 ```
 
+## Development
+
+- `make install` to setup
+- `make ci` to run linter and tests
+- `make release` to update dist files
+
 ## Dependencies
 
 - angular [https://github.com/angular]
