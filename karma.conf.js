@@ -16,7 +16,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*_spec.js'
+      'src/**_spec.js',
+      'src/**/*.html'
     ],
 
 
@@ -28,7 +29,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/**/*_spec.js': ['browserify']
+      'src/**/*_spec.js': ['browserify'],
+      'src/**/*.html':    ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      moduleName: 'karma.templates'
     },
 
     browserify: {
