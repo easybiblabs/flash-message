@@ -1,14 +1,5 @@
-define([
-	'angular',
-	'app/lib/message/flash-directive',
-	'app/lib/message/flash'
-], function(
-	angular,
-	FlashDirective,
-	FlashService
-) {
-  'use strict';
-  angular.module('flash', [])
-    .directive('flashMessages', FlashDirective)
-    .factory('Flash', FlashService);
-});
+var angular = require('angular-bsfy');
+
+angular.module('flash-message', [])
+	.directive('flashMessage', require('./flash-directive'))
+	.factory('FlashMessage', require('./flash-factory'));
