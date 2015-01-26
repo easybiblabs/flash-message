@@ -1,4 +1,4 @@
-require('./index');
+require('angular-bsfy');
 require('angular-mocks');
 
 var flashDirective = require('./flash-directive');

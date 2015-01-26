@@ -4,18 +4,18 @@ require('angular-mocks');
 var chai = require('chai');
 chai.should();
 
-var find = function(parent, selector){
-  return parent.querySelectorAll(selector);
-};
-
 describe('Directive: flashMessages', function() {
   'use strict';
+
+  var find = function(parent, selector) {
+    return parent.querySelectorAll(selector);
+  };
 
   var $scope, $rootScope, setScopeAndCompile, $timeout, $compile;
   var fixture = '<flash:message></flash:message>';
 
-  beforeEach(window.angular.mock.module('karma.templates'));
-  beforeEach(window.angular.mock.module('flash-message'));
+  beforeEach(window.window.angular.mock.module('karma.templates'));
+  beforeEach(window.window.angular.mock.module('flash-message'));
 
   beforeEach(inject(function(_$rootScope_, _$compile_, _$timeout_) {
     $rootScope = _$rootScope_;
@@ -72,7 +72,7 @@ describe('Directive: flashMessages', function() {
     });
 
     it('should render correctly', function() {
-      var element = angular.element(fixture);
+      var element = window.angular.element(fixture);
       $scope = $rootScope.$new();
       $compile(element)($scope);
       $rootScope.$digest();
