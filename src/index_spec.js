@@ -4,6 +4,10 @@ require('angular-mocks');
 var chai = require('chai');
 chai.should();
 
+var find = function(parent, selector){
+  return parent.querySelectorAll(selector);
+};
+
 describe('Directive: flashMessages', function() {
   'use strict';
 
@@ -76,25 +80,10 @@ describe('Directive: flashMessages', function() {
       $rootScope.$emit('flash:message', messages);
       $rootScope.$digest();
 
-      expect(element.find('.alert').length).to.equal(1);
-      expect(element.find('.alert-success').length).to.equal(1);
-      expect(element.find('.alert-success i').hasClass('fa-thumbs-up')).to.equal(true);
-      expect(element.find('.alert-success').text()).to.match(/^\s*text\s*$/);
-    });
-
-    it('should render correctly', function() {
-      var element = angular.element(fixture);
-      $scope = $rootScope.$new();
-      $compile(element)($scope);
-      $rootScope.$digest();
-
-      $rootScope.$emit('flash:message', messages);
-      $rootScope.$digest();
-
-      expect(element.find('.alert').length).to.equal(1);
-      expect(element.find('.alert-success').length).to.equal(1);
-      expect(element.find('.alert-success i').hasClass('fa-thumbs-up')).to.equal(true);
-      expect(element.find('.alert-success').text()).to.match(/^\s*text\s*$/);
+      expect(find(element[0], '.alert').length).to.equal(1);
+      expect(find(element[0], '.alert-success').length).to.equal(1);
+      expect(find(element[0], '.alert-success i.fa-thumbs-up').length).to.equal(1);
+      expect(find(element[0], '.alert-success h2')[0].childNodes[0].nodeValue).to.be.equal('text');
     });
   });
 });
