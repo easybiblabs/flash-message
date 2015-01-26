@@ -1,0 +1,19 @@
+/* ****************************************************************************
+   STYLE
+   ----------------------------------------------------------------------------
+   @name:         app/lib/message/flash.scss
+   @author:       Imagine Easy Solutions
+   @note:         SCSS file for the flash messaging component
+
+ =========================================================================== */
+
+.flash-messages {
+  position: fixed;
+  z-index: 100000;
+  top: 0px;
+  transition: top 500ms;
+
+  &.off-screen {
+    top: -500px;
+  }
+}

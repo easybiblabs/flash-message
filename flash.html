@@ -1,0 +1,8 @@
+<div class="flash-messages" ng-class="{'off-screen': !visible}">
+    <div ng-repeat="message in messages" data-test="flash-messages">
+        <div class="alert-{{ message.className() }} alert flash" role="alert">
+            <i class="icon fa fa-{{ message.icon() }}"></i>
+            <h2 translate="{{ message.text }}" translate-values="message.params"></h2>
+        </div>
+    </div>
+</div>
