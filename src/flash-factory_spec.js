@@ -1,9 +1,9 @@
-require('./index');
+require('angular-bsfy');
 require('angular-mocks');
 
 var mockRootScope,
   Flash,
-  flashService = require('./flash');
+  flashService = require('./flash-factory');
 
 var chai = require('chai');
 chai.should();
