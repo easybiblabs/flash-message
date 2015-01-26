@@ -1,9 +1,15 @@
-define([
-  'app/lib/message/flash'
-], function(flashService) {
+require('./index');
+require('angular-mocks');
+
+var mockRootScope,
+  Flash,
+  flashService = require('./flash');
+
+var chai = require('chai');
+chai.should();
+
+describe('', function() {
   'use strict';
-  var mockRootScope,
-    Flash;
 
   beforeEach(function() {
     mockRootScope = {
