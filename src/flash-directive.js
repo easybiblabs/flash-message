@@ -4,7 +4,7 @@ module.exports = function FlashDirective() {
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: 'src/flash.html',
+    templateUrl: function(element, attr) { return attr.templateUrl ? attr.templateUrl : 'src/flash.html' },
     controller: ['$scope', '$rootScope', '$timeout', function($scope, $rootScope, $timeout) {
       $rootScope.$on('flash:message', function(_, messages) {
         $scope.messages = messages;
