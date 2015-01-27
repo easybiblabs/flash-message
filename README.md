@@ -13,7 +13,7 @@ In your template
 In your code
 
 ```javascript
-FlashMessage.warning('Be warned', 1000);
+FlashMessage.warning('Be warned');
 ```
 
 ## Development

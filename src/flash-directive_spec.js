@@ -52,15 +52,9 @@ describe('Directive: flashMessage', function() {
         $timeout.flush();
       });
 
-      it('waits 3 seconds by default, then turns off visible', function() {
+      it('waits 3 seconds, then turns off visible', function() {
         $scope.$emit('flash:message', []);
         $timeout.flush(3000);
-        $scope.visible.should.equal(false);
-      });
-
-      it('waits 1 second when configured, then turns off visible', function() {
-        $scope.$emit('flash:message', [], 1000);
-        $timeout.flush(1000);
         $scope.visible.should.equal(false);
       });
 
