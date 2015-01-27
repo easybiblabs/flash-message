@@ -53,10 +53,7 @@ module.exports = (function() {
     }
 
     function flash() {
-      var args = toArray(arguments).map(function(arg) {
-        return new Message(arg);
-      });
-      emit(args);
+
     }
 
     angular.extend(flash, {
