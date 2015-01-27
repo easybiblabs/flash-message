@@ -1,4 +1,4 @@
-module.exports = function FlashDirective($rootScope, $timeout) {
+module.exports = function FlashDirective() {
   'use strict';
 
   var getTemplateUrl = function(element, attr) {
