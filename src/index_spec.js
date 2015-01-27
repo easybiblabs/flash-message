@@ -4,7 +4,7 @@ require('angular-mocks');
 var chai = require('chai');
 chai.should();
 
-describe('Directive: flashMessages', function() {
+describe('Directive: flashMessage', function() {
   'use strict';
 
   var find = function(parent, selector) {
