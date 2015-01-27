@@ -7,13 +7,16 @@
 
  =========================================================================== */
 
-.flash-messages {
+$flash-message-prefix: '' !default;
+
+.#{$flash-message-prefix}-flash-messages {
+  width: 100%;
   position: fixed;
   z-index: 100000;
   top: 0px;
   transition: top 500ms;
 
-  &.off-screen {
+  &.#{$flash-message-prefix}-off-screen {
     top: -500px;
   }
 }
