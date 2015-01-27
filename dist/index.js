@@ -2275,20 +2275,28 @@ angular.module('pascalprecht.translate')
 module.exports = function FlashDirective() {
   'use strict';
 
+  var getTemplateUrl = function(element, attr) {
+    return attr.templateUrl ? attr.templateUrl : 'src/flash-directive.html';
+  };
+
+  var getTimeout = function(timeout) {
+    return typeof timeout !== 'undefined' ? timeout : 3000;
+  };
+
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: function(element, attr) { return attr.templateUrl ? attr.templateUrl : 'src/flash.html' },
+    templateUrl: getTemplateUrl,
     controller: ['$scope', '$rootScope', '$timeout', function($scope, $rootScope, $timeout) {
-      $rootScope.$on('flash:message', function(_, messages) {
+      $rootScope.$on('flash:message', function(_, messages, timeout) {
         $scope.messages = messages;
         $scope.visible = true;
         $timeout(function() {
           $scope.visible = false;
-        }, 3000);
+        }, getTimeout(timeout));
         $timeout(function() {
           $scope.messages = [];
-        }, 4000);
+        }, getTimeout(timeout) + 1000);
       });
     }]
   };
