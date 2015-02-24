@@ -8,11 +8,11 @@ module.exports = (function() {
   angular.module('flash-message', [
     'pascalprecht.translate'
   ])
-    .directive('flashMessage', require('flash-directive'))
-    .factory('FlashMessage', require('flash-factory'));
+    .directive('flashMessage', require('modules/flash-directive'))
+    .factory('FlashMessage', require('modules/flash-factory'));
 })();
 
-},{"angular":2,"angular-translate":2,"flash-directive":3,"flash-factory":4}],2:[function(require,module,exports){
+},{"angular":2,"angular-translate":2,"modules/flash-directive":3,"modules/flash-factory":4}],2:[function(require,module,exports){
 
 },{}],3:[function(require,module,exports){
 module.exports = function FlashDirective() {
