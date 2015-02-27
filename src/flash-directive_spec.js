@@ -1,6 +1,6 @@
 require('angular-bsfy');
 require('angular-mocks');
-
+require('angular-translate');
 var flashDirective = require('./flash-directive');
 
 var chai = require('chai');
