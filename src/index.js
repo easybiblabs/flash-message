@@ -1,8 +1,9 @@
-var angular = require('angular-bsfy');
-require('angular-translate');
+module.exports = (function() {
+  'use strict';
 
-angular.module('flash-message', [
-	'pascalprecht.translate'
-])
-	.directive('flashMessage', require('./flash-directive'))
-	.factory('FlashMessage', require('./flash-factory'));
+  angular.module('flash-message', [
+    'pascalprecht.translate'
+  ])
+    .directive('flashMessage', require('./flash-directive'))
+    .factory('FlashMessage', require('./flash-factory'));
+})();
