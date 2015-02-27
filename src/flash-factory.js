@@ -1,5 +1,3 @@
-var angular = require('angular-bsfy');
-
 module.exports = (function() {
   'use strict';
 
