@@ -1,6 +1,3 @@
-require('angular');
-require('angular-mocks');
-
 var mockRootScope,
   Flash,
   flashService = require('./flash-factory');
