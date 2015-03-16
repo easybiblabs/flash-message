@@ -15,8 +15,9 @@ $flash-message-prefix: '' !default;
   z-index: 100000;
   top: 0px;
   transition: top 500ms;
+  pointer-events: none;
 
   &.#{$flash-message-prefix}-off-screen {
-    top: -500px;
+    top: -50000px;
   }
 }
