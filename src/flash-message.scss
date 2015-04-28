@@ -14,10 +14,13 @@ $flash-message-prefix: '' !default;
   position: fixed;
   z-index: 100000;
   top: 0px;
-  transition: top 500ms;
+  transition: top 300ms, opacity 300ms;
   pointer-events: none;
+  text-align: center;
+  height: 0;
 
   &.#{$flash-message-prefix}-off-screen {
-    top: -50000px;
+    opacity: 0;
+    top: -20px;
   }
 }
