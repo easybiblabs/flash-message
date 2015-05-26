@@ -27,7 +27,7 @@ module.exports = function FlashDirective() {
         $scope.visible = true;
         $timeout(function() {
           $scope.visible = false;
-        }, 3000);
+        }, 7000);
         $timeout(function() {
           $scope.messages = [];
         }, 4000);

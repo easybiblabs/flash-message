@@ -52,9 +52,9 @@ describe('Directive: flashMessage', function() {
         $timeout.flush();
       });
 
-      it('waits 3 seconds, then turns off visible', function() {
+      it('waits 7 seconds, then turns off visible', function() {
         $scope.$emit('flash:message', []);
-        $timeout.flush(3000);
+        $timeout.flush(7000);
         $scope.visible.should.equal(false);
       });
 
