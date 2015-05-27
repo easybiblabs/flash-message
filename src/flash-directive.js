@@ -18,7 +18,7 @@ module.exports = function FlashDirective() {
         }, 7000);
         $timeout(function() {
           $scope.messages = [];
-        }, 4000);
+        }, 7500);
       });
     }]
   };
