@@ -58,9 +58,9 @@ describe('Directive: flashMessage', function() {
         $scope.visible.should.equal(false);
       });
 
-      it('waits 4 seconds, then empties the messages array', function() {
+      it('waits 7.5 seconds, then empties the messages array', function() {
         $scope.$emit('flash:message', []);
-        $timeout.flush(4000);
+        $timeout.flush(7500);
         $scope.messages.length.should.equal(0);
       });
     });
