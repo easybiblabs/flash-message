@@ -1,7 +1,7 @@
 {
   "main": "./src/index.js",
   "name": "imagineeasy-flash-message",
-  "license": "BSD-2-Clause",
+  "license": "Apache-2.0",
   "version": "0.1.4",
   "repository": "https://github.com/easybiblabs/flash-message",
   "devDependencies": {
